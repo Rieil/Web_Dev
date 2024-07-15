@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project Forms</title>
+    <link rel="stylesheet" href="per_info.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/PUPlogo.png" alt="PUP Logo" class="logo">
+            <ul>
+                <li><a href="home.html" class="home-btn">Home</a></li>
+                <li><a href="https://www.pup.edu.ph/about/">About PUP</a></li>
+                <li><a href="https://www.pup.edu.ph/students/">Students</a></li>
+                <li><a href="https://www.pup.edu.ph/researcher/">Research</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="logout-btn" onclick="logout()">Log Out</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="tabs-wrapper">
+        <div class="tabs">
+            <div class="tab highlight">I. Personal Information</div>
+            <div class="tab">II. Education</div>
+            <div class="tab">III. Home & Family</div>
+            <div class="tab">IV. Health</div>
+            <div class="tab">V. Interests</div>
+            <div class="tab">VI. Test Results</div>
+            <div class="tab">VII. Significant</div>
+        </div>
+    </div>
+
+    <main>
+        <fieldset>
+            <legend>INDIVIDUAL INVENTORY RECORD FORM</legend>
+            <form id="per_info_form" action="per_info.php" method="POST">
+                <div class="form-section left-section">
+                    <div class="form-row">
+                        <div>
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="surname">Surname:</label>
+                            <input type="text" id="surname" name="surname" required>
+                        </div>
+                        <div>
+                            <label for="firstname">First Name:</label>
+                            <input type="text" id="firstname" name="firstname" required>
+                        </div>
+                        <div>
+                            <label for="middlename">Middle Name:</label>
+                            <input type="text" id="middlename" name="middlename">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="course">Course:</label>
+                            <input type="text" id="course" name="course" required>
+                        </div>
+                        <div>
+                            <label for="year">Year:</label>
+                            <input type="text" id="year" name="year" required>
+                        </div>
+                        <div>
+                            <label for="section">Section:</label>
+                            <input type="text" id="section" name="section" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="height">Height (m):</label>
+                            <input type="number" id="height" name="height" step="0.01" required>
+                        </div>
+                        <div>
+                            <label for="weight">Weight:</label>
+                            <input type="number" id="weight" name="weight" required>
+                        </div>
+                        <div>
+                            <label for="complexion">Complexion:</label>
+                            <input type="text" id="complexion" name="complexion" required>
+                        </div>
+                    </div>
+                    <label for="cityaddress">City Address:</label>
+                    <input type="text" id="cityaddress" name="cityaddress" required>
+                    
+                    <label for="provaddress">Provincial Address:</label>
+                    <input type="text" id="provaddress" name="provaddress" required>
+                    
+                    <label for="employer">If working, please indicate the name and address of employer:</label>
+                    <textarea id="employer" name="employer" required></textarea>
+                    
+                    <label for="contactperson">Person to be contacted in case of accident or serious illness:</label>
+                    <input type="text" id="contactperson" name="contactperson" required>
+                    
+                    <div class="form-row">
+                        <div>
+                            <label for="contactaddress">Address:</label>
+                            <input type="text" id="contactaddress" name="contactaddress" required>
+                        </div>
+                        <div>
+                            <label for="relationship">Relationship:</label>
+                            <select id="relationship" name="relationship" required>
+                                <option value="parent">Parent</option>
+                                <option value="guardian">Guardian</option>
+                                <option value="sibling">Sibling</option>
+                                <option value="relative">Relative</option>
+                                <option value="friend">Friend</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="contactnumber">Contact Number:</label>
+                            <input type="tel" id="contactnumber" name="contactnumber" required>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="form-section right-section">
+                    <div class="form-row">
+                        <div>
+                            <label for="gender">Gender:</label>
+                            <select id="gender" name="gender" required>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="age">Age:</label>
+                            <input type="number" id="age" name="age" required>
+                        </div>
+                        <div>
+                            <label for="civilstatus">Civil Status:</label>
+                            <select id="civilstatus" name="civilstatus" required>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                                <option value="widowed">Widowed</option>
+                                <option value="separated">Separated</option>
+                                <option value="divorced">Divorced</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="religion">Religion:</label>
+                            <select id="religion" name="religion" required>
+                                <option value="catholic">Catholic</option>
+                                <option value="christian">Christian</option>
+                                <option value="inc">Iglesia ni Cristo (INC)</option>
+                                <option value="bornagain">Born Again</option>
+                                <option value="muslim">Muslim</option>
+                                <option value="hindu">Hindu</option>
+                                <option value="buddhist">Buddhist</option>
+                                <option value="jewish">Jewish</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="dob">Date of Birth:</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div>
+                            <label for="pob">Place of Birth:</label>
+                            <input type="text" id="pob" name="pob" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="telno">Telephone No.:</label>
+                            <input type="tel" id="telno" name="telno" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="mobileno">Mobile No.:</label>
+                            <input type="tel" id="mobileno" name="mobileno" required>
+                        </div>
+                        <div>
+                            <label for="highschoolavg">High School General Average:</label>
+                            <input type="number" id="highschoolavg" name="highschoolavg" step="0.01" required>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Next" id="perInfoNextBtn">
+            </form>
+        </fieldset>
+    </main>
+</body>
+</html>

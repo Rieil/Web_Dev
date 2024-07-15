@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project Forms</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/PUPlogo.png" alt="PUP Logo" class="logo" height="50px" width="50px">
+            <ul>
+            <li><a href="landing.html" class="home-btn">Home</a></li>
+            <li><a href="https://www.pup.edu.ph/about/">About PUP</a></li>
+            <li><a href="https://www.pup.edu.ph/students/">Students</a></li>
+            <li><a href="https://www.pup.edu.ph/researcher/">Research</a></li>
+        </ul>
+            <div class="auth-buttons">
+            <button class="signup-btn" onclick="redirectToSignup()">Sign Up</button>
+            <button class="login-btn" onclick="redirectToLogin()">Log In</button>
+        </div>
+        </nav>
+    </header>
+    <main>
+        <div class="right-container">
+            <div class="signup-container">
+                <h3>New Here?</h3>
+                <p>Sign up now to access our forms and streamline your guidance, counseling, and testing needs.</p>
+                <button class="signup-btn" onclick="redirectToSignup()">Create an Account</button>            
+            </div>
+            <div class="login-container">
+                <div class="login-group">
+                    <h2>Welcome to PUP's Guidance, Counseling, and Testing Services Forms Hub!</h2>
+                    <h3>Welcome Back!</h3>
+                    <form id="loginForm">
+                        <div class="input-row">
+                            <input type="text" id="studentnumber-login" name="studentnumber-login" placeholder="Student Number ex. 2020-XXXXX-XX-0" required>
+                        </div>
+                        <div class="input-row">
+                            <input type="password" id="password-login" name="password-login" placeholder="Password" required>
+                        </div>
+                        <div class="forgot-password">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="loginacc-btn">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Project Forms</title>
+        <link rel="stylesheet" href="significant.css">
+    </head>
+    <style>
+        img{
+            width: 95%;
+        }
+    </style>
+    <body>
+        <header>
+            <nav>
+                <img src="images/PUPlogo.png" alt="PUP Logo" class="logo">
+                <ul>
+                    <li><a href="home.html" class="home-btn">Home</a></li>
+                    <li><a href="https://www.pup.edu.ph/about/">About PUP</a></li>
+                    <li><a href="https://www.pup.edu.ph/students/">Students</a></li>
+                    <li><a href="https://www.pup.edu.ph/researcher/">Research</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="logout-btn" onclick="logout()">Log Out</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="tabs-wrapper">
+            <div class="tabs">
+                <div class="tab">I. Personal Information</div>
+                <div class="tab">II. Education</div>
+                <div class="tab">III. Home & Family</div>
+                <div class="tab">IV. Health</div>
+                <div class="tab">V. Interests</div>
+                <div class="tab">VI. Test Results</div>
+                <div class="tab highlight">VII. Significant</div>
+            </div>
+        </div>
+
+        <main>
+            <fieldset>
+                <legend>INDIVIDUAL INVENTORY RECORD FORM</legend>
+                <h2>VII. Significant Notes</h2>
+                <p>Note: This section will be filled out by <u>guidance counselors only</u>.
+                <p>This is the last page of the <strong>INDIVIDUAL INVENTORY RECORD FORM</strong>.
+                <p>If you are sure of all the answers you provided, you may now click on the <b>"Submit"</b> button.
+                <div class="form-buttons">
+                    <input type="submit" value="Submit" id="significantNextBtn" onclick="window.location.href = 'submit.html';"/>
+                </div>
+            </fieldset>
+        </main>
+    </body>
+    </html>

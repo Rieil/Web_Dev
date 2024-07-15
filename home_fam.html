@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Project Forms</title>
+        <link rel="stylesheet" href="per_info.css"> <!--to fix !!!!!-->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img src="images/PUPlogo.png" alt="PUP Logo" class="logo">
+                <ul>
+                    <li><a href="home.html" class="home-btn">Home</a></li>
+                    <li><a href="https://www.pup.edu.ph/about/">About PUP</a></li>
+                    <li><a href="https://www.pup.edu.ph/students/">Students</a></li>
+                    <li><a href="https://www.pup.edu.ph/researcher/">Research</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="logout-btn" onclick="logout()">Log Out</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="tabs-wrapper">
+            <div class="tabs">
+                <div class="tab">I. Personal</div>
+                <div class="tab">II. Education</div>
+                <div class="tab highlight">III. Home & Family</div>
+                <div class="tab">IV. Health</div>
+                <div class="tab">V. Interests</div>
+                <div class="tab">VI. Test Results</div>
+                <div class="tab">VII. Significant</div>
+            </div>
+        </div>
+
+        <main>
+            <fieldset>
+                <legend>INDIVIDUAL INVENTORY RECORD FORM</legend>
+                <form id="home_fam_form" action="home_fam.php" method="POST">
+                    <div class="form-section left-section">
+                        <h2>III. Home and Family</h2>
+                        <p>A. Father</p>
+                        <div class="form-row">
+                            <div>
+                                <label for="father_name">Name of Father:</label>
+                                <input type="text" id="father_name" name="father_name" required>
+                            </div>
+                            <div>
+                                <label for="age">Age:</label>
+                                <input type="number" id="age" name="age" required>
+                            </div>
+                            <div>
+                                <label for="life">Living or Deceased:</label>
+                                <select id="life" name="life" required>
+                                    <option value="living">Living</option>
+                                    <option value="deceased">Deceased</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label for="educ_attain">Educational Attainment:</label>
+                        <input type="text" id="educ_attain" name="educ_attain" required>
+                        
+                        <label for="occupation">Occupation:</label>
+                        <input type="text" id="occupation" name="occupation" required>
+                        
+                        <label for="employer_name">Name of Employer:</label>
+                        <input type="text" id="employer_name" name="employer_name" required>
+
+                        <label for="employer_add">Address of Employer:</label>
+                        <input type="text" id="employer_add" name="employer_add" required>
+
+                    <br></br>
+                    <hr style="width:100%;text-align:left;margin-left:0%">
+                        <p>B. Mother</p>
+                            <div class="form-row">
+                                <div>
+                                    <label for="mother_name">Name of Mother:</label>
+                                    <input type="text" id="mother_name" name="mother_name" required>
+                                </div>
+                                <div>
+                                    <label for="age">Age:</label>
+                                    <input type="number" id="age" name="age" required>
+                                </div>
+                                <div>
+                                    <label for="life">Living or Deceased:</label>
+                                    <select id="life" name="life" required>
+                                        <option value="living">Living</option>
+                                        <option value="deceased">Deceased</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <label for="educ_attain">Educational Attainment:</label>
+                            <input type="text" id="educ_attain" name="educ_attain" required>
+                            
+                            <label for="occupation">Occupation:</label>
+                            <input type="text" id="occupation" name="occupation" required>
+                            
+                            <label for="employer_name">Name of Employer:</label>
+                            <input type="text" id="employer_name" name="employer_name" required>
+    
+                            <label for="employer_add">Address of Employer:</label>
+                            <input type="text" id="employer_add" name="employer_add" required>
+
+                        <br></br>
+                        <hr style="width:100%;text-align:left;margin-left:0%">
+                            <p>C. Guardian</p>
+                                <div class="form-row">
+                                    <div>
+                                        <label for="guardian_name">Name of Guardian:</label>
+                                        <input type="text" id="guardian_name" name="guardian_name" required>
+                                    </div>
+                                    <div>
+                                        <label for="age">Age:</label>
+                                        <input type="number" id="age" name="age" required>
+                                    </div>
+                                    <div>
+                                        <label for="life">Living or Deceased:</label>
+                                        <select id="life" name="life" required>
+                                            <option value="living">Living</option>
+                                            <option value="deceased">Deceased</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label for="educ_attain">Educational Attainment:</label>
+                                <input type="text" id="educ_attain" name="educ_attain" required>
+                                
+                                <label for="occupation">Occupation:</label>
+                                <input type="text" id="occupation" name="occupation" required>
+                                
+                                <label for="employer_name">Name of Employer:</label>
+                                <input type="text" id="employer_name" name="employer_name" required>
+        
+                                <label for="employer_add">Address of Employer:</label>
+                                <input type="text" id="employer_add" name="employer_add" required>
+
+                    <br></br>
+                    <hr style="width:100%;text-align:left;margin-left:0%">
+  
+                    <div class="form-section right-section">
+                        <div class="form-row">
+                            <div>
+                                <label for="marital">Parents' Marital Relationship</label>
+                                <select id="marital" name="marital" required>
+                                    <option value="single">Single Parent</option>
+                                    <option value="married_together">Married and staying together</option>
+                                    <option value="married_separated">Married but Separated</option>
+                                    <option value="not_married_together">Not Married but Living Together</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="num_children">Number of children in the family including yourself:</label>
+                                <input type="number" id="num_children" name="num_children" required>
+                            </div>
+                            <div>
+                                <label for="num_bro">Number of brother/s:</label>
+                                <input type="number" id="num_bro" name="num_bro" required>
+                            </div>
+                            <div>
+                                <label for="num_sis">Number of sister/s:</label>
+                                <input type="number" id="num_sis" name="num_sis" required>
+                            </div>
+                        
+                        </div>
+                        <div class="form-row">
+                            <div>
+                                <label for="num_employed">Number of brother/s or sister/s gainfully employed:</label>
+                                <input type="number" id="num_employed" name="num_employed" required>
+                            </div>
+                            <div>
+                                <label for="ordinal_pos">Ordinal Position (1st child, 2nd child, etc.):</label>
+                                <input type="text" id="ordinal_pos" name="ordinal_pos" required>
+                            </div>
+                        
+                        </div>
+                        <div class="form-row">
+                            <div>
+                                <label for="support">Is your brother/sister who is gainfully employed providing support to your:</label>
+                                <input type="checkbox" id="support" name="support" value="family" >family?
+                                <input type="checkbox" id="support" name="support" value="studies" >studies?
+                                <input type="checkbox" id="support" name="support" value="own_family" >his/her own family?                                
+                            </div>
+                            <div>
+                                <label for="finances">Who finances your schooling?:</label>
+                                <input type="checkbox" id="finances" name="finances" value="parents" >Parents
+                                <input type="checkbox" id="finances" name="finances" value="bro_sis" >Brother/Sister
+                                <input type="checkbox" id="finances" name="finances" value="spouse" >Spouse<br></br>
+                                <input type="checkbox" id="finances" name="finances" value="scholarship" >Scholarship
+                                <input type="checkbox" id="finances" name="finances" value="relatives" >Relatives
+                                <input type="checkbox" id="finances" name="finances" value="self_support" >Self-supporting/working student                               
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div>
+                                <label for="allowance">How much is your weekly allowance (please specify the amount):</label>
+                                <input type="number" id="allowance" name="allowance" required>
+                            </div>
+                            <div>
+                                <label for="income">Parents' Total Monthly Income</label>
+                                <select id="income" name="income" required>
+                                    <option value="below5k">Below Php 5,000</option>
+                                    <option value="5-10k">Php 5,001 - Php 10,000</option>
+                                    <option value="10-15k">Php 10,001 - Php 15,000</option>
+                                    <option value="15k-20k">Php 15,001 - Php 20,000</option>
+                                    <option value="20-25k">Php 20,001 - Php 25,000</option>
+                                    <option value="25-30k">Php 25,001 - Php 30,000</option>
+                                    <option value="30k-35k">Php 30,001 - Php 35,000</option>
+                                    <option value="35-40k">Php 35,001 - Php 40,000</option>
+                                    <option value="45-50k">Php 40,001 - Php 45,000</option>
+                                    <option value="above50k">Above Php 50,001</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div>
+                                <label for="quiet">Do you have a quiet place to study?</label>
+                                <select id="quiet" name="quiet" required>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="share">Do you share your room with anyone?</label>
+                                <select id="share" name="share" required>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="share_with">If yes, with whom?</label>
+                                <input type="text" id="share_with" name="share_with">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div>
+                                <label for="residence">Nature of Residence while attending school:</label>
+                                <select id="residence" name="residence" required>
+                                    <option value="family_home">Family Home</option>
+                                    <option value="relative_house">Relative's house</option>
+                                    <option value="shared_apartment">Shares apartment with friends/relatives</option>
+                                    <option value="bed_spacer">Bed spacer</option>
+                                    <option value="rented_apartment">Rented apartment</option>
+                                    <option value="house_brosis">House of married brother/sister</option>
+                                    <option value="self_supporting">Self-supporting/working student</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Next" id="homefamNextBtn">
+                </form>
+            </fieldset>
+        </main>
+    </body>
+    </html>

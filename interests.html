@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project Forms</title>
+    <link rel="stylesheet" href="interests.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/PUPlogo.png" alt="PUP Logo" class="logo">
+            <ul>
+                <li><a href="home.html" class="home-btn">Home</a></li>
+                <li><a href="https://www.pup.edu.ph/about/">About PUP</a></li>
+                <li><a href="https://www.pup.edu.ph/students/">Students</a></li>
+                <li><a href="https://www.pup.edu.ph/researcher/">Research</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="logout-btn" onclick="logout()">Log Out</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="tabs-wrapper">
+        <div class="tabs">
+            <div class="tab">I. Personal</div>
+            <div class="tab">II. Education</div>
+            <div class="tab">III. Home & Family</div>
+            <div class="tab">IV. Health</div>
+            <div class="tab highlight">V. Interests</div>
+            <div class="tab">VI. Test Results</div>
+            <div class="tab">VII. Significant</div>
+        </div>
+    </div>
+
+    <main>
+        <fieldset>
+            <legend>INDIVIDUAL INVENTORY RECORD FORM</legend>
+            <form id="interests_form" action="interests.php" method="POST">
+                <div class="form-section left-section">
+                    <h2>V. Interests</h2>
+                    <p>A. Academic</p>
+                    <div class="form-row">
+                        <div>
+                            <label>Math Club <input type="checkbox" name="acads[]" value="math"></label>
+                            <label>Debating Club <input type="checkbox" name="acads[]" value="debating"></label>
+                            <label>Science Club <input type="checkbox" name="acads[]" value="science"></label>
+                            <label>Quizzer's Club <input type="checkbox" name="acads[]" value="quizzer"></label>
+                            <label>Others <input type="checkbox" name="acads[]" value="other"></label>
+                        </div>
+                    </div>
+                    <label for="fave_sub">What is/are your favorite subject/s?:</label>
+                    <input type="text" id="fave_sub" name="fave_sub" required>
+                    
+                    <label for="least_fave_sub">What is/are the subject/s you like the least?:</label>
+                    <input type="text" id="least_fave_sub" name="least_fave_sub" required>
+
+                    <hr style="width:100%;text-align:left;margin-left:0%">
+                    <p>B. Extra-curricular</p>
+                    <div class="form-row">
+                        <div>
+                            <label for="hobbies">What are your hobbies? Write them in the order of your preferences.</label>
+                            <input type="text" name="hobbies[]" required>
+                            <input type="text" name="hobbies[]">
+                            <input type="text" name="hobbies[]">
+                            <input type="text" name="hobbies[]">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label>Which of the following organizations have you participated in and which interest you most? (Please specify)</label><br>
+                            <label><input type="checkbox" name="orgs[]" value="athletics"> Athletics</label>
+                            <label><input type="checkbox" name="orgs[]" value="dramatics"> Dramatics</label>
+                            <label><input type="checkbox" name="orgs[]" value="religious"> Religious Organization</label>
+                            <label><input type="checkbox" name="orgs[]" value="chess"> Chess Club</label>
+                            <label><input type="checkbox" name="orgs[]" value="glee"> Glee Club</label>
+                            <label><input type="checkbox" name="orgs[]" value="scouting"> Scouting</label>
+                            <label><input type="checkbox" name="orgs[]" value="others"> Others</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label>Occupational position in the organization:</label><br>
+                            <label><input type="checkbox" name="org_pos[]" value="officer"> Officer</label>
+                            <label><input type="checkbox" name="org_pos[]" value="member"> Member</label>
+                            <label><input type="checkbox" name="org_pos[]" value="others"> Others</label>
+                        </div>
+                    </div>
+                    <input type="submit" value="Next" id="interestsNextBtn">
+                </div>
+            </form>
+        </fieldset>
+    </main>
+</body>
+</html>

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins'); 
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.left-container {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition for transform property */
+}
+
+.slide-right {
+    transform: translateX(100%);
+}
+
+header {
+    background-color: #8b0000;
+    padding: 10px 0;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul a {
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: white;               
+    text-decoration: none;       
+    padding: 10px 20px;         
+    display: inline-block;       
+    transition: color 0.3s;      
+}
+
+nav ul a:hover {
+    color: #FFE500;              
+}
+
+.auth-buttons button,
+.login-container button,
+.signup-container button {
+    background-color: #FFE500;      /* Initial background color */
+    color: #8b0000;
+    border: none;                   /* Remove border */
+    font-family: 'Poppins', sans-serif; /* Font family */
+    font-weight: 600;
+    padding: 8px 16px;             /* Adjusted padding */
+    cursor: pointer;                /* Pointer cursor on hover */
+    margin-left: 10px;              /* Margin to the left */
+    border-radius: 20px;            /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Added transform */
+}
+
+.auth-buttons button:hover,
+.login-container button:hover {
+    background-color: #FFF;   /* Background color on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: translateY(-2px); /* Lift the button on hover */
+}
+
+.signup-container button {
+    width: 50%; /* Set width to 50% of its container */
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Ensure it behaves as a block element */
+}
+
+.signup-container button:hover {
+    background-color: #FFF;   /* Background color on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: translateY(-2px); /* Lift the button on hover */
+}
+
+.left-container {
+    display: flex;
+    height: calc(100vh - 60px); /* Full viewport height minus the header height */
+}
+
+.signup-container {
+    background-color: #681C1C;
+    color: white;
+    padding: 50px;
+    width: 70%;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signup-container h2 {
+    font-family: 'Poppins';
+    font-weight: 500;
+    margin-bottom: 10px; /* Adjust spacing between h2 and h3 */
+}
+
+.signup-container h3 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 30px;
+    color: #FFE500;
+    margin-top: 40px; /* Adjust spacing above h3 */
+    position: relative; /* Add position relative for absolute line positioning */
+}
+
+.signup-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust line position */
+    left: 0; /* Align left with the text */
+    width: calc(100% - 1px); /* Adjust line width based on container minus padding */
+    height: 1px; /* Adjust line thickness */
+    background-color: #f2f2f2; /* Line color */
+}
+
+.login-container {
+    background-color: #fff;
+    color: #8b0000;
+    padding: 50px;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-container h3{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 30px;   
+}
+
+.login-container p{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;   
+    color: black;
+}
+
+.login-container button {
+    margin-top: 10px; /* Add spacing above the button */
+}
+
+.signup-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Spacing between input rows */
+}
+
+.signup-group input {
+    width: 100%; /* Set width to 100% to occupy the entire space */
+    padding: 15px; /* Increased padding for better spacing */
+    box-sizing: border-box;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: box-shadow 0.3s; /* Smooth transition for box-shadow */
+    box-shadow: 0px 4px 8px rgb(206, 161, 13); /* Default drop shadow */
+    margin-bottom: 10px; /* Spacing between input fields */
+    margin-right: 10px;
+}
+
+.signup-group input::placeholder {
+    color: #8b0000;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.signup-group input:focus {
+    outline: none;
+    border: 2px solid #f2f2f2;
+    box-shadow: none; /* Remove box-shadow on focus */
+}
+
+.signup-group input:hover {
+    box-shadow: 0px 4px 8px rgb(255, 230, 0); /* Yellow drop shadow on hover */
+}
+
+.signup-group label {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 12px; /* Adjusted spacing between labels */
+}
+
+.signup-group a {
+    color: #FFE500;
+    text-decoration: none;
+}
+
+.signup-group .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px; /* Add small spacing from the left */
+}
+
+.signup-group .checkbox-container input[type="checkbox"] {
+    margin-right: 10px; /* Adjusted margin to align with input fields */
+    width: 20px;
+    height: 20px;
+}
+
+.signup-group .checkbox-container label {
+    color: white;
+    font-size: 14px;
+    display: inline; /* Ensures the label displays inline with the checkbox */
+}

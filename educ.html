@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Project Forms</title>
+        <link rel="stylesheet" href="educ.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img src="images/PUPlogo.png" alt="PUP Logo" class="logo">
+                <ul>
+                    <li><a href="home.html" class="home-btn">Home</a></li>
+                    <li><a href="https://www.pup.edu.ph/about/">About PUP</a></li>
+                    <li><a href="https://www.pup.edu.ph/students/">Students</a></li>
+                    <li><a href="https://www.pup.edu.ph/researcher/">Research</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="logout-btn" onclick="logout()">Log Out</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="tabs-wrapper">
+            <div class="tabs">
+                <div class="tab">I. Personal Information</div>
+                <div class="tab highlight">II. Education</div>
+                <div class="tab">III. Home & Family</div>
+                <div class="tab">IV. Health</div>
+                <div class="tab">V. Interests</div>
+                <div class="tab">VI. Test Results</div>
+                <div class="tab">VII. Significant</div>
+            </div>
+        </div>
+
+        <main>
+            <fieldset>
+                <legend>INDIVIDUAL INVENTORY RECORD FORM</legend>
+                <form id="education_info" action="educ.php" method="POST">
+                    <div class="education-section">
+                        <h2>II. Education</h2>
+                        <table>
+                            <tr>
+                                <th>Level</th>
+                                <th>School Graduated</th>
+                                <th>School Address</th>
+                                <th>Public/Private</th>
+                                <th>Dates of Attendance</th>
+                                <th>Honors/Awards</th>
+                            </tr>
+                            <tr>
+                                <td>Pre-elementary</td>
+                                <td><input type="text" name="pre_elem_school" required></td>
+                                <td><input type="text" name="pre_elem_address" required></td>
+                                <td>
+                                    <select name="pre_elem_type" required>
+                                        <option value="">Select Type</option>
+                                        <option value="public">Public</option>
+                                        <option value="private">Private</option>
+                                    </select>
+                                </td>
+                                <td><input type="month" name="pre_elem_dates" required></td>
+                                <td><input type="text" name="pre_elem_awards"></td>
+                            </tr>
+                            <tr>
+                                <td>Elementary</td>
+                                <td><input type="text" name="elem_school" required></td>
+                                <td><input type="text" name="elem_address" required></td>
+                                <td>
+                                    <select name="elem_type" required>
+                                        <option value="">Select Type</option>
+                                        <option value="public">Public</option>
+                                        <option value="private">Private</option>
+                                    </select>
+                                </td>
+                                <td><input type="month" name="elem_dates" required></td>
+                                <td><input type="text" name="elem_awards"></td>
+                            </tr>
+                            <tr>
+                                <td>High School</td>
+                                <td><input type="text" name="hs_school" required></td>
+                                <td><input type="text" name="hs_address" required></td>
+                                <td>
+                                    <select name="hs_type" required>
+                                        <option value="">Select Type</option>
+                                        <option value="public">Public</option>
+                                        <option value="private">Private</option>
+                                    </select>
+                                </td>
+                                <td><input type="month" name="hs_dates" required></td>
+                                <td><input type="text" name="hs_awards"></td>
+                            </tr>
+                            <tr>
+                                <td>Vocational</td>
+                                <td><input type="text" name="voc_school" required></td>
+                                <td><input type="text" name="voc_address" required></td>
+                                <td>
+                                    <select name="voc_type" required>
+                                        <option value="">Select Type</option>
+                                        <option value="public">Public</option>
+                                        <option value="private">Private</option>
+                                    </select>
+                                </td>
+                                <td><input type="month" name="voc_dates" required></td>
+                                <td><input type="text" name="voc_awards"></td>
+                            </tr>
+                            <tr>
+                                <td>College if any</td>
+                                <td><input type="text" name="college_school" required></td>
+                                <td><input type="text" name="college_address" required></td>
+                                <td>
+                                    <select name="college_type" required>
+                                        <option value="">Select Type</option>
+                                        <option value="public">Public</option>
+                                        <option value="private">Private</option>
+                                    </select>
+                                </td>
+                                <td><input type="month" name="college_dates" required></td>
+                                <td><input type="text" name="college_awards"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" value="Next" id="educInfoNextBtn"/>
+                    </div>
+                </form>
+            </fieldset>
+        </main>
+    </body>
+    </html>

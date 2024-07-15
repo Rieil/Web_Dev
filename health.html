@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Project Forms</title>
+        <link rel="stylesheet" href="health.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img src="images/PUPlogo.png" alt="PUP Logo" class="logo">
+                <ul>
+                    <li><a href="home.html" class="home-btn">Home</a></li>
+                    <li><a href="https://www.pup.edu.ph/about/">About PUP</a></li>
+                    <li><a href="https://www.pup.edu.ph/students/">Students</a></li>
+                    <li><a href="https://www.pup.edu.ph/researcher/">Research</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="logout-btn" onclick="logout()">Log Out</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="tabs-wrapper">
+            <div class="tabs">
+                <div class="tab">I. Personal Information</div>
+                <div class="tab">II. Education</div>
+                <div class="tab">III. Home & Family</div>
+                <div class="tab highlight">IV. Health</div>
+                <div class="tab">V. Interests</div>
+                <div class="tab">VI. Test Results</div>
+                <div class="tab">VII. Significant</div>
+            </div>
+        </div>
+
+        <main>
+            <fieldset>
+                <legend>INDIVIDUAL INVENTORY RECORD FORM</legend>
+                <form id="health_info" action="health.php" method="POST">
+                    <div class="health-section">
+                        <h2>IV. Health</h2>
+                        <table>
+                            <p>A. Physical</p>
+                            <p>Do you have problems with:</p>
+                            <tr>
+                                <th></th>
+                                <th>Yes or No</th>
+                                <th>If yes, please specify</th>
+                            </tr>
+                            <tr>
+                                <td>Your vision</td>
+                                <td>
+                                    <select name="health_vision" required>
+                                        <option value="">Select Type</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="vision_prob"></td>
+                            </tr>
+                            <tr>
+                                <td>Your hearing</td>
+                                <td>
+                                    <select name="health_hearing" required>
+                                        <option value="">Select Type</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="hearing_prob"></td>
+                            </tr>
+                            <tr>
+                                <td>Your speech</td>
+                                <td>
+                                    <select name="health_speech" required>
+                                        <option value="">Select Type</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="speech_prob"></td>
+                            </tr>
+                            <tr>
+                                <td>Your general health</td>
+                                <td>
+                                    <select name="health_general" required>
+                                        <option value="">Select Type</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="genhealth_prob"></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                    <hr style="width:100%;text-align:left;margin-left:0%">
+                        <table>
+                            <p>B. Psychological</p>
+                            <p>Previous Consultations</p>
+                            <tr>
+                                <th></th>
+                                <th>Yes or No</th>
+                                <th>When?</th>
+                                <th>For what?</th>
+                            </tr>
+                            <tr>
+                                <td>Psychiatrist</td>
+                                <td>
+                                    <select name="psychiatrist" required>
+                                        <option value="">Select Type</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </td>
+                                <td><input type="month" name="psychia_dates"></td>
+                                <td><input type="text" name="psychia_why"></td>
+                            </tr>
+                            <tr>
+                                <td>Psychologist</td>
+                                <td>
+                                    <select name="psychologist" required>
+                                        <option value="">Select Type</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </td>
+                                <td><input type="month" name="psycho_dates"></td>
+                                <td><input type="text" name="psycho_why"></td>
+                            </tr>
+                            <tr>
+                                <td>Counselor</td>
+                                <td>
+                                    <select name="counselor" required>
+                                        <option value="">Select Type</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </td>
+                                <td><input type="month" name="counsel_dates"></td>
+                                <td><input type="text" name="counsel_why"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" value="Next" id="healthInfoNextBtn"/>
+                    </div>
+                </form>
+            </fieldset>
+        </main>
+    </body>
+    </html>
